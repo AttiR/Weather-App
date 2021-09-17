@@ -5,21 +5,24 @@ const htpps = require('https');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv').config();
 
+
 const app = express()
+app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static(__dirname + '/public'));
+app.set('view engine', 'ejs');
 
 
 app.get('/', function(req, res){
 
-  res.sendFile(__dirname + "/index.html");
+  res.sendFile(__dirname + "/views/index.html");
 })
 
 app.post("/", function(req, res){
   
 
   const query = req.body.cityName;
-  const api = "f431395af671de376a7cd24e3d742a86";
+  const api = KEY;
   const unit = "metric";
 
   const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + api + "&units=" + unit + "";
@@ -47,4 +50,4 @@ app.post("/", function(req, res){
 
 const PORT = process.env.PORT 
 
-app.listen(5000, console.log("Port start running "))
+app.listen(PORT, console.log("Port start running "))

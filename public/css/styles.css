@@ -2,8 +2,11 @@
   margin: 0;
   padding: 0;
 }
+body {
+  text-align: center;
+}
 main {
-  margin: 0px auto 50px auto;
+  margin: 0px auto;
   text-align: center;
   background-image: url('https://www.wallpapertip.com/wmimgs/25-252076_background-image-for-weather-app.jpg');
   background-size: cover;
@@ -44,64 +47,10 @@ form {
   height: 100px;
 }
 
-.weather h2 {
-  position: relative;
-  padding: 5px;
-}
-
 .container {
-  max-width: 900px;
+  max-width: 700px;
   margin: auto;
-  visibility: hidden;
-}
-
-.weather h2 {
-  font-family: Montserrat;
-  font-size: 18px;
-  line-height: 0.78;
-  text-align: left;
-  color: #4a4a4a;
-}
-
-.weather {
-  width: 200px;
-  height: 260px;
-  padding: 20px;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-}
-
-.weathericon {
-  width: 150px;
-  height: 150px;
-}
-
-#destination {
-  font-family: Montserrat;
-  font-size: 30px;
-  font-weight: 600;
-  letter-spacing: 0.9px;
-  text-align: left;
-  color: #27b7c1;
-}
-
-.sectiontitle {
-  width: 300px;
-  align-items: center;
-}
-
-.sectiontitle h2 {
-  font-family: Montserrat;
-  font-size: 22px;
-  font-weight: 300;
-  letter-spacing: 3.4px;
-  text-align: left;
-  color: #4a4a4a;
-}
-
-#weather {
-  display: flex;
-  justify-content: space-around;
-  min-height: 150px;
+  min-height: 50vh;
 }
 
 #cityInput {
@@ -147,37 +96,23 @@ form {
     margin-top: 30px;
     padding-bottom: 10px;
   }
-
-  .weather {
-    margin: 10px auto;
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    align-items: center;
-  }
-
-  .weather {
-    padding: 10px 20px;
-    height: 100%;
-  }
-
-  .sectiontitle,
-  .sectiontitle h2,
-  #destination {
-    margin: auto;
-    text-align: center;
-  }
+}
+#weather-update {
+  margin: 20px auto;
 }
 
 .footer {
   text-align: center;
   padding: 20px;
-  background-color: #df921f;
+  background-color: #e7e3dcc2;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 10vh;
 }
 
 .footer p {
-  color: #ffffff;
+  background-color: hsl(180, 25%, 90%);
+
+  color: #27b7c1;
 }
