@@ -22,7 +22,9 @@ app.post("/", function(req, res){
   
 
   const query = req.body.cityName;
-  const api = KEY;
+
+  const api = process.env.Api_Key;
+
   const unit = "metric";
 
   const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + api + "&units=" + unit + "";
@@ -50,4 +52,7 @@ app.post("/", function(req, res){
 
 const PORT = process.env.PORT 
 
+
 app.listen(PORT, console.log("Port start running "))
+
+
